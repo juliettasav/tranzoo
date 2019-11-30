@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/adaptive.css">
+    <title>Test Tranzoo</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="header__box-image">
+                <img src="assets/image/icon/cryptoexch.svg" alt="Main Logo" class="img__logo">
+            </div>
+
+            <nav class="navigation">
+                <div class="hamburger"></div>
+                <ul class="menu-header mobile-menu">
+                    <li class="menu-header__list"><a href="#">Обменять</a></li>
+                    <li class="menu-header__list"><a href="#">Резервы</a></li>
+                    <li class="menu-header__list"><a href="#">Как мы работаем</a></li>
+                    <li class="menu-header__list"><a href="#">FAQ</a></li>
+                    <li class="menu-header__list"><a href="#">Документы</a></li>
+                </ul>
+                
+            </nav>
+
+            <button class="btn btn-login">Личный кабинет</button>
+
+        </div>
+
+    </header>
+    <section class="main">
+
+        <div class="container">
+
+            <div class="main__box">
+                <h1 class="main__box-title">
+                    Меняйте валюты как вам удобно!
+                </h1>
+                <p class="main__box-text">
+                    Просто выберите интересующую вас валюту из перечня доступых, и мы обменяем ее по самому выгодному
+                    курсу.
+                </p>
+                <div class="main__box-img">
+                    <img src="assets/image/icon/trustpilot.png" alt="Trust Pilot" class="img img-rate">
+
+                </div>
+
+            </div>
+
+            <div class="main__box main__box-curency">
+                <h3 class="main__box-second_title">Выберете одно из направлений обмена</h3>
+                <div class="currency__box-small">
+                    <div class="currency__item" id="visa">
+                        <img src="/assets/image/icon/bitcoin.png" alt="" class="img img-currency">
+                        <img src="/assets/image/icon/arrow-right.png" alt="" class="img img-currency">
+                        <img src="./assets/image/icon/visa.png" alt="" class="img img-currency">
+                    </div>
+                    <div class="currency__item" id="etherium">
+                        <img src="/assets/image/icon/bitcoin.png" alt="" class="img img-currency">
+                        <img src="/assets/image/icon/arrow-right.png" alt="" class="img img-currency">
+                        <img src="./assets/image/icon/etherium.png" alt="" class="img img-currency">
+                    </div>
+                    <div class="currency__item" id='advcash'>
+                        <img src="/assets/image/icon/bitcoin.png" alt="" class="img img-currency">
+                        <img src="/assets/image/icon/arrow-right.png" alt="" class="img img-currency">
+                        <img src="./assets/image/icon/advcash.png" alt="" class="img img-currency">
+                    </div>
+                </div>
+                <div class="currency__box-big">
+
+
+
+                    <div class="main-currency-item currency__item-big currency__box-send">
+                        <div class="currency__item-in">
+                            <label for="" class="currency__item-text">Вы отправляете</label>
+                            <input class="currency__item-amount" type="text" placeholder="1000">
+                        </div>
+
+                        <div class="currency__item-in menu-open">
+
+                            <div class="currency__menu-item current-currency current-currency-send">
+                                <img src="/assets/image/icon/visa.png" alt="" class="img img-currency-menu">
+                                <span id="display-1">Visa/Mastercard UAH</span>
+                                <span class="arrow-down"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="currency__menu first-currency__menu" id="you-sent"></div>
+
+                    </div>
+
+
+                    <p class="currency__box-text">
+                        Комиссия за обмен
+                        <span class='tax-amount'>23 UAH</span>
+                    </p>
+                    <div class="main-currency-item currency__item-big curency__box-convert">
+                        <div class="currency__item-in">
+                            <label for="" class="currency__item-text">Вы получите</label>
+                            <input class="currency__item-amount" type="text" placeholder="1000">
+                        </div>
+                        <div class="currency__item-in menu-open">
+
+                            <div class="currency__menu-item current-currency current-currency-get ">
+                                <img src="/assets/image/icon/visa.png" alt="" class="img img-currency-menu">
+                                <span id="display-2">Visa/Mastercard UAH</span>
+                                <span class="arrow-down"></span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="currency__menu second-currency__menu" id="you-get"></div>
+
+                    </div>
+                </div>
+
+                <div class="box-agreement">
+                    <label class="checkbox">
+                    <input type="checkbox">
+                      <div class="checkbox__text">Я согласен с правилами сервиса</div>
+                     </label>
+                </div>
+
+                <div class="main__box-button">
+                    <button class="btn btn-change">Обменять</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

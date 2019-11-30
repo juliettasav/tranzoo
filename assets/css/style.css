@@ -1,0 +1,385 @@
+/* --- BASE STYLES ---  */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face{
+    font-family: "Gotham Bold";
+    src: url('../fonts/GothaProBol.otf');
+}
+
+body {
+    background-image: url("../image/pic/bg-crypto@3x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1148px;
+    margin: 0 auto;
+}
+
+.img {
+    width: 100%;
+}
+
+/* --- END BASE STYLES ---  */
+
+/* --- HEADER --- */
+
+header {
+    padding-top: 14px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.header__box-image {
+    width: 193px;
+    height: 35px;
+}
+
+
+.navigation {
+    display: flex;
+}
+
+.menu-header {
+    display: flex;
+}
+
+.menu-header__list {
+    padding: 0 25px;
+    line-height: 37px;
+}
+
+.menu-header__list a {
+
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    text-decoration: none;
+}
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+    position: relative;
+    background-color: transparent;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+    line-height: 22px;
+    padding: 5px 10px;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    z-index: 4;
+  }
+
+.hamburger:after {
+    content: '≡';
+    width: 100%;
+    height: 100%;
+
+}
+.hamburger.open:after {
+  content: '×';
+}
+
+
+
+
+/* END HAMBURGER */
+
+
+.btn-login {
+    width: 162px;
+    height: 37px;
+    margin-left: -150px;
+    font-size: 14px;
+    padding: 10px 23px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- END HEADER --- */
+
+/* --- MAIN BLOCK ---  */
+
+.main {
+    margin-top: 106px;
+}
+.main .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main__box:nth-child(2) {
+    min-width: 444px;
+    margin-left: 120px;
+}
+
+/* --- LEFT BOX --- */
+
+.main__box-title {  
+    margin: 45px 0;
+    font-family: "Gotham Bold";
+    font-size: 40px;
+    color: #333333;
+
+}
+
+p.main__box-text {
+    margin-bottom: 55px;
+    
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #341139;
+}
+
+.main__box-img {
+    width: 145px;
+    height: 71px;
+}
+/* --- END LEFT BOX --- */
+
+/* --- RIGHT BOX ---  */
+
+.main__box-curency {
+    padding: 40px 23px 28px 21px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.main__box-second_title {
+    font-family: "Gotham Bold";
+    font-size: 18px;
+    color: #212121;
+}
+
+.currency__box-small {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.currency__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 126px;
+    height: 42px;
+    margin: 33px 0;
+    border-radius: 3px;
+    border: solid 1px #efefef;
+    cursor: pointer; 
+    transition: all ease .3s;
+    
+}
+
+.currency__item:hover {
+    border: solid 1px #a3a3a3;
+}
+
+.img-currency {
+    width: 26px;
+    height: 26px;
+}
+
+.img-currency:nth-child(2) {
+    width: 15px;
+    height: 12px;
+    margin: 0 10px;
+}
+
+.main-currency-item {
+    position: relative;
+    justify-content: space-between;
+}
+
+.currency__item-big {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 1px #efefef;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+
+
+.currency__item-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #a3a3a3;
+    
+}
+
+.currency__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    border: solid 1px #efefef;
+    
+}
+
+.active {
+    display: block;
+}
+
+
+.currency__menu .currency__item-big {
+    padding: 19px 15px;
+    border-radius: none;
+    border: none;
+
+}
+
+.currency__menu .currency__item-big:nth-child(2) {
+    border-top: solid 1px #efefef;
+    border-bottom: solid 1px #efefef;
+    
+}
+
+
+.arrow-down {
+    margin-left: 5px;
+}
+
+.arrow-down::before {
+    display: inline-block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+input.currency__item-amount {
+    display: block;
+    border: none;
+    margin-top: 8px;
+    font-family: 'Roboto', sans-serif;  
+    font-size: 21px;
+    color: #212121;
+
+}
+
+.currency__item-amount::placeholder {
+    color: #212121;
+}
+.currency__box-text {
+    display: inline-block;
+    margin-bottom: 28px;
+    font-size: 12px;
+    color: #a3a3a3;
+    letter-spacing: 0;
+}
+
+.img-currency-menu {
+    width: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tax-amount {
+    display: inline-block;
+    font-family: "Gotham Bold";
+    color: #212121;
+
+}
+
+
+
+.curency__box-convert {
+    margin-bottom: 15px;
+}
+
+input#agreement {
+    background-color: #331139;
+}
+
+.main__box-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #331139;
+    text-align: center;
+    color: #ffffff;
+    border-width: 0;
+}
+
+.btn-change {
+    margin-top: 26px;
+    width: 240px;
+    height: 42px;
+    font-family: "Gotham Bold";
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+/* CHECKBOX */
+
+.checkbox input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.checkbox__text {
+	position: relative;
+	padding-left: 25px;
+    cursor: pointer;
+    line-height: 18px;
+    color: #212121;
+    font-family: 'Roboto', sans-serif;
+}
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border-radius: 3px;
+	background: #331139;
+	transition: .2s;
+}
+.checkbox__text:after {
+	content: '✓';
+	position: absolute;
+	top: 1px;
+	left: 3px;
+    background: transparent;
+    color: #fff;
+    opacity: 0;
+	transition: .2s;
+}
+
+.checkbox input:checked + .checkbox__text:after {
+	opacity: 1;
+}
+
+/* END CHECKBOX */
+
+
+/* --- END RIGHT BOX ---  */
+
+/* --- END MAIN BLOCK ---  */
