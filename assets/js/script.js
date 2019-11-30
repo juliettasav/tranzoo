@@ -59,7 +59,7 @@ document.addEventListener('click', e => {
 
 // CHANGE CURRENCY BY DOWN MENU
 
-const paymentValues = ['Visa', 'Advcash', 'Bitcoin', 'Etherium'];
+const paymentValues = ['Visa or Mastercard UAH', 'Advcash', 'Bitcoin', 'Etherium'];
 
 const youSentContainer = document.querySelector('#you-sent');
 const firstDisplay = document.querySelector('#display-1');

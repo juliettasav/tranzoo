@@ -216,6 +216,10 @@ p.main__box-text {
     cursor: pointer;
 }
 
+.currency__item-in:first-child {
+    max-width: 200px;
+}
+
 
 .currency__item-text {
     font-family: 'Roboto', sans-serif;
