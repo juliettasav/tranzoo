@@ -172,6 +172,7 @@ function showMenu() {
         menu.removeEventListener("transitionend", handler);
     };
     menu.style.display = "block";
+    
     menu.classList.add("b-enter");
 
     raf(function () {
