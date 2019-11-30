@@ -69,7 +69,7 @@ const secondDisplay = document.querySelector('#display-2');
 const renderMenu = (container, display) => {
     container.innerHTML = paymentValues.map(payment => (`
         <div class="currency__item-big" data-payment-id="${payment}">
-            <img src="/assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu"></img>          
+            <img src="./assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu"></img>          
             <span>${payment}</span>
         </div>
     ` )).join('');
@@ -84,7 +84,7 @@ const addMenuListeners = (container, display) => {
     container.querySelectorAll('.currency__item-big').forEach(element => {
         element.addEventListener('click', ({ target }) => {
             let textPayment = target.dataset.paymentId;
-            display.innerHTML = `<img src="/assets/image/icon/${textPayment.toLowerCase()}.png" alt="" class="img img-currency-menu">
+            display.innerHTML = `<img src="./assets/image/icon/${textPayment.toLowerCase()}.png" alt="" class="img img-currency-menu">
             <span id="display-2">${textPayment}</span>
             <span class="arrow-down"></span>`
             
@@ -105,7 +105,7 @@ const buttonChange = function(button, display) {
     
     button.addEventListener('click', e => {
 
-        wholeFirstDisplay.innerHTML = `<img src="/assets/image/icon/bitcoin.png" alt="" class="img img-currency-menu">
+        wholeFirstDisplay.innerHTML = `<img src="./assets/image/icon/bitcoin.png" alt="" class="img img-currency-menu">
         <span id="display-2">Bitcoin</span>
         <span class="arrow-down"></span>`;
 
@@ -113,7 +113,7 @@ const buttonChange = function(button, display) {
             
             
             if(payment.toLowerCase() == buttonId){
-                display.innerHTML = `<img src="/assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu">
+                display.innerHTML = `<img src="./assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu">
                 <span id="display-2">${payment}</span>
                 <span class="arrow-down"></span>`
                 
