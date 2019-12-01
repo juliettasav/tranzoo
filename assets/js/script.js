@@ -161,31 +161,7 @@ buttonChange(toAdvcashButton, wholeSecondDisplay);
 
 // MENU FOR MOBILE
 
-let buttonHamburger = document.querySelector('.hamburger');
-let hamburgerLines = document.querySelectorAll('.line');
 let menuHeader = document.querySelector('.menu-header');
-
-// function openHeaderMenu() {
-//     menuHeader.classList.toggle('open');
-//     buttonHamburger.classList.toggle('open');
-//     body.style.position = 'fixed'; 
-// }
-
-// buttonHamburger.addEventListener('click', openHeaderMenu)
-
-
-
-// document.addEventListener('click', e => {
-//     let target = e.target;
-//     let header_menu = target == menuHeader || menuHeader.contains(target);
-//     let its_hamburger = target == buttonHamburger;
-//     let menu_is_active = menuHeader.classList.contains('open');
-    
-//     if (!header_menu && !its_hamburger && menu_is_active) {
-//         openHeaderMenu();
-//     }
-// });
-
 let checkbox = document.querySelector('.checkbox');
 let menu = document.querySelector('.mobile-menu');
 let body = document.querySelector('body');
