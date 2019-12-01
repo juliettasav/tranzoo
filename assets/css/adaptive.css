@@ -125,6 +125,23 @@
     span#display-1, span#display-2 {
         font-size: 12px;
     }
+
+    .currency__item-in:nth-child(1){
+        max-width: 65px;
+    }
+
+    .currency__item-text{
+        font-size: 10px;
+    }
+
+    input.currency__item-amount{
+        margin-top: 0;
+        font-size: 18px;
+    }
+
+    .img-currency:nth-child(2){
+        margin: 0 4px;
+    }
 }
 
 @media (max-width: 376px) {
@@ -146,10 +163,7 @@
         margin-left: -105px;
     }
 
-    .currency__item-in:nth-child(1) {
-        max-width: 80px;
-        
-    }
+   
     .currency__item-text {
         font-size: 10px;
     }
