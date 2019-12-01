@@ -18,6 +18,7 @@ body {
 .body.mobile-big {
     position: fixed;
     max-width: 250px;
+    background-size: contain;
 }
 
 .container {
