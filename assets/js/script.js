@@ -59,7 +59,7 @@ document.addEventListener('click', e => {
 
 // CHANGE CURRENCY BY DOWN MENU
 
-const paymentValues = ['Visa or Mastercard UAH', 'Advcash', 'Bitcoin', 'Etherium'];
+const paymentValues = ['Visa/Mastercard UAH', 'Advcash', 'Bitcoin', 'Etherium'];
 
 const youSentContainer = document.querySelector('#you-sent');
 const firstDisplay = document.querySelector('#display-1');
@@ -67,12 +67,22 @@ const youGetContainer = document.querySelector('#you-get');
 const secondDisplay = document.querySelector('#display-2');
 
 const renderMenu = (container, display) => {
-    container.innerHTML = paymentValues.map(payment => (`
+    paymentValues.map(payment => {
+        if (payment == paymentValues[0]){
+            container.innerHTML = (`
+            <div class="currency__item-big" data-payment-id="${payment}">
+                <img src="./assets/image/icon/card.png" alt="" class="img img-currency-menu"></img>          
+                <span>${payment}</span>
+            </div>
+        ` )
+        
+        } else {
+        container.innerHTML +=  (`
         <div class="currency__item-big" data-payment-id="${payment}">
             <img src="./assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu"></img>          
             <span>${payment}</span>
         </div>
-    ` )).join('');
+    ` )}}).join('');
 
     addMenuListeners(container, display);
     
@@ -84,9 +94,18 @@ const addMenuListeners = (container, display) => {
     container.querySelectorAll('.currency__item-big').forEach(element => {
         element.addEventListener('click', ({ target }) => {
             let textPayment = target.dataset.paymentId;
-            display.innerHTML = `<img src="./assets/image/icon/${textPayment.toLowerCase()}.png" alt="" class="img img-currency-menu">
-            <span id="display-2">${textPayment}</span>
-            <span class="arrow-down"></span>`
+            
+                display.innerHTML = `<img src="./assets/image/icon/${textPayment.toLowerCase()}.png" alt="" class="img img-currency-menu">
+                <span id="display-2">${textPayment}</span>
+                <span class="arrow-down"></span>`
+
+                // if (textPayment = 'Visa/Mastercard UAH') {
+                //     display.innerHTML = `<img src="./assets/image/icon/card.png" alt="" class="img img-currency-menu">
+                //     <span id="display-2">${textPayment}</span>
+                //     <span class="arrow-down"></span>`
+                // } 
+            
+            
             
         })
     });
