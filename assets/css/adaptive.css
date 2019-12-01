@@ -23,11 +23,10 @@
 
     .menu-header.mobile-menu {
         display: none;
-        width: 200px;
+        width: 400px;
         height: 1000px;
-        padding-top: -20%;
         position: absolute;
-        right: -15px;
+        left: -100px;
         top: -25px;
         background-color: #341139;
         z-index: 3;
@@ -35,8 +34,8 @@
         transition: all ease .4s;
     }
 
-    .mobile-menu.open {
-        right: 0;
+    .menu-toggle span{
+        display: block;
     }
   
     .mobile-menu li a {
@@ -77,6 +76,13 @@
         font-size: 13px;
         padding: 5px 0;
     }
+
+    .menu-header.mobile-menu {
+       
+       width: 200px; 
+       left: -150px;
+    }
+
 
     .mobile-menu li a {
         font-size: 17px;
@@ -121,6 +127,10 @@
     .img__logo {
         width: 130px;
     }
+
+    .menu-header.mobile-menu {
+        left: -130px;
+    }
     .btn-login {
         width: 90px;
         font-size: 12px;
@@ -134,5 +144,11 @@
     }
     .currency__item-text {
         font-size: 10px;
+    }
+
+}
+@media (max-width: 321px){
+    .menu-header.mobile-menu {
+        left: -150px;
     }
 }

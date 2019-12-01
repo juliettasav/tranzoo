@@ -94,17 +94,17 @@ const addMenuListeners = (container, display) => {
     container.querySelectorAll('.currency__item-big').forEach(element => {
         element.addEventListener('click', ({ target }) => {
             let textPayment = target.dataset.paymentId;
-            
+
+            if (textPayment == 'Visa/Mastercard UAH') {
+                display.innerHTML = `<img src="./assets/image/icon/card.png" alt="" class="img img-currency-menu">
+                <span id="display-2">Visa/Mastercard UAH</span>
+                <span class="arrow-down"></span>`
+               } else {
+                
                 display.innerHTML = `<img src="./assets/image/icon/${textPayment.toLowerCase()}.png" alt="" class="img img-currency-menu">
                 <span id="display-2">${textPayment}</span>
                 <span class="arrow-down"></span>`
-
-                // if (textPayment = 'Visa/Mastercard UAH') {
-                //     display.innerHTML = `<img src="./assets/image/icon/card.png" alt="" class="img img-currency-menu">
-                //     <span id="display-2">${textPayment}</span>
-                //     <span class="arrow-down"></span>`
-                // } 
-            
+            }
             
             
         })
@@ -129,14 +129,20 @@ const buttonChange = function(button, display) {
         <span class="arrow-down"></span>`;
 
         paymentValues.map(payment => {
+            console.log(payment);
             
             
             if(payment.toLowerCase() == buttonId){
                 display.innerHTML = `<img src="./assets/image/icon/${payment.toLowerCase()}.png" alt="" class="img img-currency-menu">
                 <span id="display-2">${payment}</span>
                 <span class="arrow-down"></span>`
+    
+            } else if (buttonId == 'visa'){
+                display.innerHTML = `<img src="./assets/image/icon/card.png" alt="" class="img img-currency-menu">
+                <span id="display-2">Visa/Mastercard UAH</span>
+                <span class="arrow-down"></span>`
                 
-            } 
+            }
             
         })
   

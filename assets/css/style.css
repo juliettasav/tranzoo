@@ -433,7 +433,7 @@ input#agreement {
   }
   
   .menu-toggle span {
-    display: block;
+    display: none;
     width: 20px;
     height: 4px;
     margin-bottom: 2px;
