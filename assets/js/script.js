@@ -197,7 +197,8 @@ function showMenu() {
         menu.removeEventListener("transitionend", handler);
     };
     menu.style.display = "block";
-    body.style.position = 'fixed'; 
+    body.classList.toggle('mobile-big');
+
     
     menu.classList.add("b-enter");
 
@@ -218,6 +219,7 @@ function hideMenu() {
     };
 
     menu.classList.add("b-hide");
+    body.classList.remove('mobile-big');
 
     raf(function () {
         menu.classList.add("b-hide-active");

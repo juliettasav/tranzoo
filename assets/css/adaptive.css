@@ -9,6 +9,10 @@
   }
 
 @media (max-width: 769px) {
+    body {
+        background-size: contain;
+    }
+   
     .container {
         max-width: 648px;
     }
@@ -19,6 +23,10 @@
 
     .main__box:nth-child(2) {
         margin: 25px 0;
+    }
+
+    .navigation {
+        padding-top: 10px;
     }
 
     .menu-header.mobile-menu {

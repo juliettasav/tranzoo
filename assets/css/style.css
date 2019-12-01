@@ -15,6 +15,11 @@ body {
 
 }
 
+.body.mobile-big {
+    position: fixed;
+    max-width: 250px;
+}
+
 .container {
     max-width: 1148px;
     margin: 0 auto;
@@ -45,7 +50,6 @@ header .container {
 
 .navigation {
     display: flex;
-    padding-top: 10px;
 }
 
 .menu-header {
